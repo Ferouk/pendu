@@ -1,3 +1,4 @@
+![Pendu](https://raw.githubusercontent.com/Ferouk/pendu/master/client/app/assets/images/congrats.png)
 # Description
 **Pendu** consist of guessing a city name before running out of score.
 
