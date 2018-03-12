@@ -1,0 +1,10 @@
+<div id="game" class="box">
+  <h1>Deviner la ville!</h1>
+  <h2 class="scoreboard">Score de {{$root.username}}: {{$ctrl.score}} / 10</h2>
+  <p><span ng-repeat="character in $ctrl.wordArray" class="word"> <span ng-if="character.divined">{{character.char}}</span> <span ng-if="!character.divined">-</span></span></p>
+
+  <img ng-src="app/assets/images/{{$ctrl.level}}.png" alt="level">
+  <div class="alphabet">
+    <button ng-repeat="char in $ctrl.alphabet" ng-click="$ctrl.divine(char)" ng-disabled="$ctrl.usedChars.indexOf(char) > -1">{{char}}</button>
+  </div>
+</div>

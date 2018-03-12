@@ -1,0 +1,6 @@
+<div id="congrats" class="box">
+  <img src="app/assets/images/congrats.png" alt="Félicitation">
+  <h1>Félicitation {{$root.username}}!</h1>
+  <p>Vous avez deviné la ville de {{$root.city}} avec un score de {{$root.finalScore}}/10 :)</p>
+  <button ng-click="$ctrl.restart()">Recommencer ?</button>
+</div>

@@ -1,0 +1,68 @@
+.box{
+  background-color: $intro;
+  width: 600px;
+  margin: 30px auto auto;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 4px 4px rgba(0,0,0,.2);
+  border-radius: 5px;
+  *{
+    font-family: 'Indie Flower', cursive;
+  }
+  span.username{
+    color:$username;
+  }
+  h1{
+    color:$primary;
+  }
+  p{
+    font-size: 1.2em;
+  }
+  input{
+    background-color: white;
+    border: none;
+    width: 100%;
+    font-size: 1.2em;
+    padding: 5px;
+    &:hover, &:active,&:focus{
+      outline:none;
+    }
+  }
+
+  .word{
+    font-size: 2em;
+    display: inline-block;
+    padding: 5px;
+
+  }
+  button{
+    border: none;
+    padding: 10px;
+    font-size: 1.2em;
+    background-color: $primary;
+    color: $white;
+    margin: 20px;
+  }
+
+  .alphabet{
+    button{
+      margin: 5px;
+      padding: 15px;
+      font-size: 1.5em;
+      border: 3px solid transparent;
+      &:disabled{
+        border: 3px solid $primary;
+        color: $primary;
+        background-color: transparent;
+      }
+    }
+  }
+
+  table{
+    width: 100%;
+    font-size: 1.2em;
+    th{
+      color: $primary;
+    }
+  }
+}

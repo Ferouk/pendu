@@ -1,0 +1,27 @@
+<div id="intro" class="box">
+  <h1>Jeu de pendu</h1>
+  <h2>Salut <span class="username">{{$root.username}}</span>!</h2>
+  <p ng-if="$ctrl.msg !== ''">{{$ctrl.msg}}</p>
+  <input type="text" placeholder="Nom d'utilisateur" ng-model="$root.username">
+  <button ng-click="$ctrl.startGame()">Commencer !</button>
+
+  <div id="scoreboard" ng-if="$ctrl.scoreboard && $ctrl.scoreboard.length > 0">
+    <h1>Scoreboard</h1>
+    <table>
+      <thead>
+      <tr>
+        <th>Nom d'utilisateur</th>
+        <th>Score</th>
+        <th>Date</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr ng-repeat="score in $ctrl.scoreboard | orderBy:'-finalScore' | limitTo:10">
+        <td>{{score.username}}</td>
+        <td>{{score.finalScore}}/10</td>
+        <td>{{score.time | date: "dd/MM/yyyy HH:mm:ss"}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
